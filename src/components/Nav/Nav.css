@@ -8,22 +8,21 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0 32px;
-  background-color: var(--red);
+  background-color: var(--grey);
   position: fixed;
   top: 0;
   z-index: 5;
 }
 .link {
   text-decoration: none;
-  font-size: 1.5rem;
-  color: var(--black);
+  font-size: 1rem;
+  color: var(--blue);
   padding: 0 16px;
-  border-radius: 8px;
   transition: all 0.3s ease-in-out;
 }
-.link-text:hover,
-.link-text:focus {
-  background-color: var(--yellow);
+.link:hover,
+.link:focus {
+  border-bottom: 3px solid var(--blue);
 }
 
 .nav .wrapper {
@@ -31,7 +30,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--grey);
 }
 
 .hamburger {
@@ -81,17 +79,5 @@
   .nav {
     padding: 0 0rem;
   }
-  .nav .title {
-    width: 80%;
-  }
-  .nav .title h1 {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .nav .wrapper {
-    width: 100%;
-  }
-  .link-text {
-    font-size: 1rem;
-  }
+  
 }
