@@ -5,9 +5,9 @@ import './Form.css'
 
 export const Form = () => {
   const schema = yup.object().shape({
-    name: yup.string().required('Your Name is Required!'),
-    email: yup.string().email().required(),
-    text: yup.string().required(),
+    categories: yup.string().required(),
+    title: yup.string().email().required(),
+    author: yup.string().required(),
   })
 
   const {
@@ -19,33 +19,33 @@ export const Form = () => {
   })
 
   const onSubmit = (data) => {
-    alert('Thank you ' + data.name)
+     console.log(data)
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
         type='text'
-        placeholder='Name...'
-        {...register('name')}
+        placeholder='Categories...'
+        {...register('categories')}
       />
-      <p>{errors?.name?.message}</p>
+      <p>{errors?.categories?.message}</p>
       <input
         type='text'
-        placeholder='Email...'
-        {...register('email')}
+        placeholder='Book title...'
+        {...register('title')}
       />
-      <p>{errors.email?.message}</p>
+      <p>{errors.title?.message}</p>
       <input
         type='text'
-        placeholder='Message...'
-        {...register('text')}
+        placeholder='Author...'
+        {...register('author')}
       />
-      <p>{errors.text?.message}</p>
+      <p>{errors.author?.message}</p>
 
       <input
         type='submit'
-        value='SEND MESSAGE'
+        value='ADD BOOK'
       />
     </form>
   )
