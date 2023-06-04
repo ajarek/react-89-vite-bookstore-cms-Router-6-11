@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import './Form.css'
 import { useEffect } from 'react'
-export const Form = () => {
+export const Form = ({onSubmit}) => {
   const schema = yup.object().shape({
     categories: yup.string().required(),
     title: yup.string().required(),
@@ -30,9 +30,7 @@ export const Form = () => {
     }
   }, [formState, reset])
 
-  const onSubmit = (data) => {
-     console.log(data)
-  }
+ 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

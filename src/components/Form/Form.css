@@ -24,23 +24,23 @@ input[type='text']:focus {
   color: var(--white);
 }
 form input[type='submit'] {
-  color: var(--black);
+  color: var(--white);
   width: 100%;
   padding: 8px 16px;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-color: var(--green);
+  background-color: var(--blue);
 }
 form input[type='submit']:hover {
-  background-color: var(--blue);
+  background-color: var(--green);
   color: var(--white);
 }
 .wrapper-input{
   position: relative;
 }
 form p {
-  color: red;
+  color: var(--red);
   position: absolute;
 }
