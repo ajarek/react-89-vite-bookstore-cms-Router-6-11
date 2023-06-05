@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Record.css'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
-const Record = ({ categories, title, author }) => {
+const Record = ({ categories, title, author, onClick }) => {
   const [percentage, setPercentage] = useState(0)
   const handleInputs = (e) => {
     e.preventDefault()
@@ -14,6 +14,7 @@ const Record = ({ categories, title, author }) => {
         <p>{categories}</p>
         <h3>{title}</h3>
         <p>{author}</p>
+        <button onClick={onClick}>❌</button>
       </div>
       <div className="text-circle">
       <div className='circle'>
