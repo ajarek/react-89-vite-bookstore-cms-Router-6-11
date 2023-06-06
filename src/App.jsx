@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <Categories />,
         errorElement: <Error />,
       },
-    ]
-  }
+    ],
+  },
 ])
 function App() {
   return (

@@ -9,7 +9,6 @@ export const Form = ({ onSubmit }) => {
     categories: yup.string().required(),
     title: yup.string().required(),
     author: yup.string().required(),
-    
   })
 
   const {

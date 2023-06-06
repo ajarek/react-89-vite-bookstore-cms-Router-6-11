@@ -41,7 +41,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-     
       {record.map((rec) => {
         return (
           <Record
@@ -50,7 +49,7 @@ const Home = () => {
             title={rec.title}
             author={rec.author}
             onClick={() => handleDelete(rec.id)}
-           boolean={true}
+            boolean={true}
           />
         )
       })}

@@ -8,31 +8,26 @@ const Nav = () => {
 
   return (
     <nav className='nav'>
-     
-       <Link
-          className='link'
-          to={'/'}
-        >
-         <h1> Bookstore CMS</h1>
-        </Link>
-        <div className='wrapper'>
-       
-      </div>
-      <ul className={!isOpen ? 'wrapper' : 'wrapper navbar-none'}>
       <Link
+        className='link'
+        to={'/'}
+      >
+        <h1> Bookstore CMS</h1>
+      </Link>
+      <div className='wrapper'></div>
+      <ul className={!isOpen ? 'wrapper' : 'wrapper navbar-none'}>
+        <Link
           className='link'
           to={'/'}
         >
-         <h1> BOOKS</h1>
+          <h1> BOOKS</h1>
         </Link>
         <Link
           className='link '
           to={'/categories'}
         >
-         <h2> CATEGORIES</h2>
+          <h2> CATEGORIES</h2>
         </Link>
-
-        
       </ul>
       <div className='hamburger'>
         <Hamburger

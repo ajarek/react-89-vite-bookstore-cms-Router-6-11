@@ -1,7 +1,7 @@
 form {
   width: 100%;
   height: 100%;
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -18,7 +18,6 @@ form input {
   background-color: var(--grey);
   user-select: none;
   color: var(--black);
-  
 }
 input[type='text']:focus {
   background-color: var(--blue);
@@ -38,7 +37,7 @@ form input[type='submit']:hover {
   background-color: var(--green);
   color: var(--white);
 }
-.wrapper-input{
+.wrapper-input {
   position: relative;
 }
 form p {

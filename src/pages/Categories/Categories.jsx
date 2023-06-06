@@ -16,29 +16,40 @@ const Categories = () => {
 
   useEffect(() => {
     const removeDuplicate = categories.map((rc, i) => rc.categories)
-    setCategoriesArray (Array.from(new Set(removeDuplicate)))
+    setCategoriesArray(Array.from(new Set(removeDuplicate)))
   }, [categories])
-  const handleFilter = (e)=>{
+  const handleFilter = (e) => {
     setCategoriesWord(e.target.textContent)
   }
- 
+
   return (
     <div className='home'>
       <h1>Categories</h1>
-      <div className='select'>{categoriesArray.map((el,index)=><button key={index} onClick={handleFilter}>{el}</button>)}</div>
+      <div className='select'>
+        {categoriesArray.map((el, index) => (
+          <button
+            key={index}
+            onClick={handleFilter}
+          >
+            {el}
+          </button>
+        ))}
+      </div>
       {categories
-      .filter((el)=>categoriesWord?el.categories===categoriesWord:true)
-      .map((rec) => {
-        return (
-          <Record
-            key={rec.id}
-            categories={rec.categories}
-            title={rec.title}
-            author={rec.author}
-            boolean={false}
-          />
+        .filter((el) =>
+          categoriesWord ? el.categories === categoriesWord : true
         )
-      })}
+        .map((rec) => {
+          return (
+            <Record
+              key={rec.id}
+              categories={rec.categories}
+              title={rec.title}
+              author={rec.author}
+              boolean={false}
+            />
+          )
+        })}
     </div>
   )
 }
