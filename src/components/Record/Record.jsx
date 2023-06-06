@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Record.css'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
-const Record = ({ categories, title, author, onClick }) => {
+const Record = ({ categories, title, author, onClick, boolean }) => {
   const [percentage, setPercentage] = useState(0)
   const handleInputs = (e) => {
     e.preventDefault()
@@ -14,7 +14,7 @@ const Record = ({ categories, title, author, onClick }) => {
         <p>{categories}</p>
         <h3>{title}</h3>
         <p>{author}</p>
-        <button onClick={onClick}>❌</button>
+        {boolean?<button onClick={onClick}>Remove Book</button>:null}
       </div>
       <div className="text-circle">
       <div className='circle'>

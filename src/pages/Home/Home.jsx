@@ -9,7 +9,6 @@ const Home = () => {
   const [record, setRecord] = useState([])
 
   const onSubmit = (data) => {
-    
     if (data) {
       const recordId = {
         author: data.author,
@@ -22,26 +21,27 @@ const Home = () => {
   }
 
   useEffect(() => {
-    if (record.length>0) {
-    localStorage.setItem('record', JSON.stringify(record))
+    if (record.length > 0) {
+      localStorage.setItem('record', JSON.stringify(record))
     }
   }, [record])
 
   useEffect(() => {
-    const newRecord = JSON.parse(localStorage.getItem("record"));
+    const newRecord = JSON.parse(localStorage.getItem('record'))
     if (newRecord) {
-      setRecord(newRecord);
+      setRecord(newRecord)
     }
-  }, []);
+  }, [])
 
   const handleDelete = (id) => {
-    const newFilterRecord = record.filter(rc => rc.id !== id)
+    const newFilterRecord = record.filter((rc) => rc.id !== id)
     localStorage.removeItem('record')
-    setRecord(newFilterRecord);
-  };
-  
+    setRecord(newFilterRecord)
+  }
+
   return (
     <div className='home'>
+     
       {record.map((rec) => {
         return (
           <Record
@@ -49,7 +49,8 @@ const Home = () => {
             categories={rec.categories}
             title={rec.title}
             author={rec.author}
-            onClick={()=>handleDelete(rec.id)}
+            onClick={() => handleDelete(rec.id)}
+           boolean={true}
           />
         )
       })}
