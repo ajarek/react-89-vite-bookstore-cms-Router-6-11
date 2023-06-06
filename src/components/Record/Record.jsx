@@ -14,17 +14,17 @@ const Record = ({ categories, title, author, onClick, boolean }) => {
         <p>{categories}</p>
         <h3>{title}</h3>
         <p>{author}</p>
-        {boolean?<button onClick={onClick}>Remove Book</button>:null}
+        {boolean ? <button onClick={onClick}>Remove Book</button> : null}
       </div>
-      <div className="text-circle">
-      <div className='circle'>
-        <CircularProgressbar
-          value={percentage}
-          text={`${percentage}%`}
-          className={'progress'}
-        />
-      </div>
-       <span>reading progress</span>
+      <div className='text-circle'>
+        <div className='circle'>
+          <CircularProgressbar
+            value={percentage}
+            text={`${percentage}%`}
+            className={'progress'}
+          />
+        </div>
+        <span>reading progress</span>
       </div>
       <form
         className='current-page'
